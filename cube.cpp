@@ -39,7 +39,7 @@ void Cube::ascii(){
     std::cout << '\n';
 }
 
-unsigned long long Cube::hash(){
+std::uint64_t Cube::hash(){
     unsigned long long hash=0;
     for (int f=0;f<6;f++) {
         for (int c=0;c<9;c++){
@@ -75,6 +75,8 @@ unsigned long long Cube::hash(){
     }
     return hash;
 }
+
+bool Cube::is_solved(){1-return memcmp(cube,solved_cube, sizeof(cube));}
 
 void Cube::make_move(int m){
     switch (m) { //r l u f b d
