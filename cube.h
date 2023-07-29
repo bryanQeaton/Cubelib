@@ -14,7 +14,7 @@ const char solved_cube[6][9] = {
     };
 
 
-const unsigned long long hashing_numbers[6][6][9]={2947667278772165694,
+const std::uint64_t hashing_numbers[6][6][9]={2947667278772165694,
                                              7070990693967742754,
                                              5627519992887407626,
                                              4278117349451297043,
@@ -250,8 +250,8 @@ public:
     void _swap_surfaces_c(int face);
     void ascii();
     void make_move(int m);
-    bool is_solved(){memcmp(cube,solved_cube, sizeof(cube));};
-    unsigned long long hash();
+    bool is_solved();
+    std::uint64_t hash();
 };
 
 
