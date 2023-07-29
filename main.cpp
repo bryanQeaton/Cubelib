@@ -1,12 +1,5 @@
 #include<iostream>
-#include<chrono>
 #include "cube.h"
-
-
-
-
-
-// 180 turns, center slicing, double layer turns, orientation changes, and move history are not implemented YET.
 
 unsigned long long perft(Cube cube,int depth){
     if (depth<=0){return 1ULL;}
@@ -20,15 +13,12 @@ unsigned long long perft(Cube cube,int depth){
 }
 
 int main(){
+    
     Cube cube;
 
-    int nodes=0;
-    const auto t0=std::chrono::high_resolution_clock::now();
-    nodes=perft(cube,8);
-    const auto t1=std::chrono::high_resolution_clock::now();
-    const auto dt=std::chrono::duration_cast<std::chrono::milliseconds>(t1-t0);
-    std::cout<<"\n"<<dt.count()<<" "<<nodes<<" "<<nodes/(dt.count()+1)<<std::endl;
+    std::cout<<perft(cube,8);
 
     cube.ascii();
+    
     return 0;
 }
