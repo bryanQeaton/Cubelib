@@ -1,11 +1,21 @@
 # Rubiks
-A Rubik's Cube representation written in C++
+A fairly performant Rubik's Cube representation written in C++
 
-180 turns, center slicing, double layer turns, orientation changes, and move history are not implemented YET.
+todo:
+-180 turns (U2)
+-center turns (M)
+-double layer turns (r)
+-orientation changes (x)
+-solver
+-pattern database
+-transposition table
 
 What is implemented:
 -cube 
+-zobrist hashing
 
+
+move history will likely not be added due to performance issues, you are welcome to devise a system of your own though :)
 
 ____Getting Started____:
 ```c++
