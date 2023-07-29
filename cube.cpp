@@ -1,4 +1,3 @@
-#include <iostream>
 #include "cube.h"
 
 void Cube::_swap_surfaces(int face){
@@ -40,6 +39,42 @@ void Cube::ascii(){
     std::cout << '\n';
 }
 
+unsigned long long Cube::hash(){
+    unsigned long long hash=0;
+    for (int f=0;f<6;f++) {
+        for (int c=0;c<9;c++){
+            char p=cube[f][c];
+            switch (p) {
+                case 'W': {
+                    hash^=hashing_numbers[0][f][c];
+                    break;
+                }
+                case 'G': {
+                    hash^=hashing_numbers[1][f][c];
+                    break;
+                }
+                case 'Y': {
+                    hash^=hashing_numbers[1][f][c];
+                    break;
+                }
+                case 'B': {
+                    hash^=hashing_numbers[1][f][c];
+                    break;
+                }
+                case 'O': {
+                    hash^=hashing_numbers[1][f][c];
+                    break;
+                }
+                case 'R': {
+                    hash^=hashing_numbers[1][f][c];
+                    break;
+                }
+
+            }
+        }
+    }
+    return hash;
+}
 
 void Cube::make_move(int m){
     switch (m) { //r l u f b d
