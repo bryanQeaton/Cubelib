@@ -8,11 +8,11 @@ todo:
 -orientation changes (x)
 -solver
 -pattern database
--transposition table
+
 
 What is implemented:
 -cube 
--zobrist hashing
+
 
 
 move history will likely not be added due to performance issues, you are welcome to devise a system of your own though :)
